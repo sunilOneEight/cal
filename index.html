@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-image:url(images\ \(10\).jpeg);
+        color: white;
+        background-size: cover;
+    }
+    button{
+        background-color:rgba(35, 169, 214, 0);
+        box-shadow: rgb(61, 59, 59) 8px 7px 9px;
+        cursor: pointer;
+        border:rgb(22, 21, 21) solid;
+        color: white;
+        font-weight: bold;
+        font-variant: small-caps;
+        }
+    #num{
+        font-weight: bold;
+        font-variant: small-caps;
+        border:black 2px;
+    }
+    h1{
+        text-shadow:black 0px 0px 8px;
+    }
+    #fn{
+        padding: -8px;
+    }
+</style>
+</head>
+<body>
+
+    <center>
+    <h1><b>CALCULATOR</b></h1>
+     <b><label id="num">first num</label></b>     :<input type="textbox"placeholder="first number"id="fn">
+    <br>
+    <br>
+     <b><label id="num">second num</label></b>   :<input type="textbox"placeholder="second number"id="hi">
+    <br>
+    <br>
+    <button onclick="fun2()" capation="additon">add</button> <button onclick="minus()">minus</button>   <button onclick="multi()">multi</button> <button onclick="division()">divid</button>
+    <br>
+    <br>
+    result:<h2 id="resa"></h2>
+    </center>
+</body>
+</html>
+<script>
+    function fun2(){
+    var fnumb=document.getElementById("fn").value;
+    var snumb=document.getElementById("hi").value;
+    var res=parseInt(fnumb)+parseInt(snumb);
+    document.getElementById("resa").innerHTML=res;
+    }
+    function minus(){
+    var fnumb=document.getElementById("fn").value;
+    var snumb=document.getElementById("hi").value;
+    var res=parseInt(fnumb)-parseInt(snumb);
+    document.getElementById("resa").innerHTML=res;
+    }
+    function multi(){
+    var fnumb=document.getElementById("fn").value;
+    var snumb=document.getElementById("hi").value;
+    var res=parseInt(fnumb)*parseInt(snumb);
+    document.getElementById("resa").innerHTML=res;
+    }
+    function division(){
+    var fnumb=document.getElementById("fn").value;
+    var snumb=document.getElementById("hi").value;
+    var res=parseInt(fnumb)/parseInt(snumb);
+    document.getElementById("resa").innerHTML=res;
+    }
+</Script>
